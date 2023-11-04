@@ -1,0 +1,33 @@
+@import "../../sharedModules/Colors.module";
+@import "../../sharedModules/Common.module";
+
+.navbarContainer {
+    flex: 1;
+}
+
+.navbarUl {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 15vw;
+    list-style-type: none;
+}
+
+@media (max-width: 800px) {
+    .navbarUl {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        gap: 4vh;
+    }
+}
+
+.navbarA, .navbarA:visited {
+    text-decoration: none;
+    color: $font-color;
+}
+
+.navbarA:hover {
+    opacity: 0.6;
+}
