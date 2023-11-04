@@ -1,10 +1,19 @@
 import React from "react";
+import {NavBar} from "../NavBar/NavBar";
+import {Dictionary} from "../../utils/Dictionary";
+import classes from "./Header.module.scss";
 
-export function Header() {
+interface HeaderProps {
+    sections: Dictionary<string, string>[]
+}
+export function Header({sections}: HeaderProps) {
     return (
-        <div>
-            <h1>Welcome to my website!</h1>
-            <p>By Bartosz Bizoń</p>
+        <div className={classes.headerContainer}
+        >
+            <div className={classes.logoContainer}>
+                <h2>Bartosz Bizoń</h2>
+            </div>
+            <NavBar sections={sections}/>
         </div>
     );
 }
