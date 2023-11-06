@@ -1,4 +1,12 @@
-.mainContainer {
-    max-width: 100rem;
+@import "../../sharedModules/Common.module";
 
+.mainContainer {
+    @extend .centerDivContentsH;
+    //position: relative;
+    height: 300vh;
+}
+
+.contentContainer {
+    width: 100%;
+    max-width: 110rem;
 }
