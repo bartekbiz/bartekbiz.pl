@@ -1,18 +1,53 @@
 @import "../../sharedModules/Common.module";
+@import "../../sharedModules/Variables.module";
+@import "../WelcomeScreen/WelcomeScreen.module";
 
-.headerContainer {
-  @extend .centerDivContentsHRow;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+$header-height: 4.35rem;
+$header-height-mobile: 22rem;
+$header-margin-left-right: 5%;
+$header-contents-width: calc(100% - 2 * $header-margin-left-right);
+
+.header {
+  position: fixed;
+  top: -0.3vh;
+  right: 0;
+
+  z-index: 1000;
 }
 
-@media (max-width: 800px) {
-  .headerContainer {
-    flex-direction: column;
-  }
+.headerContentsContainer {
+  @extend .header;
+  width: $header-contents-width;
+  margin-left: $header-margin-left-right;
+  margin-right: $header-margin-left-right;
+
+  @extend .centerDivContentsHVRow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .logoContainer {
+  color: $font-bright-color;
+}
 
+.headerBackground {
+  @extend .header;
+
+  width: 100%;
+
+  height: $header-height;
+  background-color: #2c2626;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+}
+
+
+@media (max-width: 700px) {
+  .headerContentsContainer {
+    flex-direction: column;
+  }
+
+  .headerBackground {
+    height: $header-height-mobile;
+  }
 }
