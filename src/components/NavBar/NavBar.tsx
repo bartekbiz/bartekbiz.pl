@@ -8,12 +8,10 @@ interface NavBarProps {
 }
 export function NavBar({sections}: NavBarProps) {
     return (
-        <div className={classes.navbarContainer}>
-            <ul className={classes.navbarUl}>
-                {sections.map((link, i) => {
-                    return <NavBarLink key={i} text={link.key} link={link.value}/>;
-                })}
-            </ul>
-        </div>
+        <ul className={classes.navbarUl}>
+            {sections.map((link, i) => {
+                return <NavBarLink key={i} text={link.key} link={link.value}/>;
+            })}
+        </ul>
     );
 }
