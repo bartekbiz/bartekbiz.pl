@@ -1,17 +1,21 @@
 import React from "react";
-import {scrollToSection} from "../../utils/Utils";
 import classes from "./NavBar.module.scss";
+import {animateScroll, Link} from "react-scroll";
 
 interface NavBarLinkProps {
-    text: string,
-    link: string
+    link: string,
+    children: any
 }
-export function NavBarLink({text, link}: NavBarLinkProps) {
+export function NavBarLink({link, children}: NavBarLinkProps) {
     return (
-        <li>
-            <a className={classes.navbarA} href={link} onClick={() => scrollToSection(link)}>
-                {text}
-            </a>
-        </li>
+        <Link
+            className={classes.navbarLink}
+            activeClass="active"
+            to={link}
+            spy={true}
+            smooth={true}
+            duration={500}
+        >{children}
+        </Link>
     );
 }

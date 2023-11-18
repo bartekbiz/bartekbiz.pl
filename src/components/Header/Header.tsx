@@ -3,6 +3,7 @@ import {NavBar} from "../NavBar/NavBar";
 import {Dictionary} from "../../utils/Dictionary";
 import classes from "./Header.module.scss";
 import {motion, useAnimation} from "framer-motion";
+import {NavBarLink} from "../NavBar/NavBarLink";
 
 interface HeaderProps {
     sections: Dictionary<string, string>[],
@@ -31,12 +32,14 @@ export function Header({sections, welcomePhotoIsInView}: HeaderProps) {
                 }}
                 initial={"hidden"}
                 animate={mainControls}
-                transition={{duration: 0.4}}
+                transition={{duration: 0.3}}
             />
 
             <div className={classes.headerContentsContainer}>
                 <div className={classes.logoContainer}>
-                    <h2 style={{whiteSpace: "nowrap"}}>Bartosz Bizoń</h2>
+                    <NavBarLink link={"home"}>
+                        <h2 style={{whiteSpace: "nowrap"}}>Bartosz Bizoń</h2>
+                    </NavBarLink>
                 </div>
                 <NavBar sections={sections}/>
             </div>

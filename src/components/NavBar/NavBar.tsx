@@ -10,7 +10,11 @@ export function NavBar({sections}: NavBarProps) {
     return (
         <ul className={classes.navbarUl}>
             {sections.map((link, i) => {
-                return <NavBarLink key={i} text={link.key} link={link.value}/>;
+                return (
+                    <NavBarLink key={i} link={link.value}>
+                        {link.key}
+                    </NavBarLink>
+                );
             })}
         </ul>
     );

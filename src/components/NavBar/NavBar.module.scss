@@ -18,11 +18,12 @@
     }
 }
 
-.navbarA, .navbarA:visited {
+.navbarLink, .navbarLink:visited {
     text-decoration: none;
     color: $font-bright-color;
 }
 
-.navbarA:hover {
-    opacity: 0.6;
+.navbarLink:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
