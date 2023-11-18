@@ -1,0 +1,24 @@
+@import "../../sharedModules/Variables.module";
+@import "../../sharedModules/Common.module";
+
+.scrollDownBtnContainer {
+  @extend .centerDivContentsH;
+
+  position: absolute;
+  bottom: 1rem;
+
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  color: $font-bright-color;
+  font-size: 3rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}

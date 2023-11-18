@@ -4,7 +4,7 @@ import classes from "./WelcomeScreen.module.scss";
 
 export function WelcomeText(){
     const text = `Hi, I'm Bartosz Bizoń \na Software Developer.`;
-    const text2 = ``;
+    const text1 = ``;
 
     return (
         <div>
