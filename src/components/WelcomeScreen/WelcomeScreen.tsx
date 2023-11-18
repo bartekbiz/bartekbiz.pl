@@ -19,7 +19,6 @@ export function WelcomeScreen({welcomeScreenRef}: WelcomeScreenProps) {
                 <WelcomeText/>
             </div>
             <ScrollDownBtn/>
-
         </div>
     );
 }
