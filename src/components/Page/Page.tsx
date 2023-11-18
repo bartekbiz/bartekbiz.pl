@@ -4,14 +4,15 @@ import classes from "./Page.module.scss";
 import {Dictionary} from "../../utils/Dictionary";
 import {useInView} from "framer-motion";
 import {WelcomeScreen} from "../WelcomeScreen/WelcomeScreen";
+import {SectionAbout} from "../SectionAbout/SectionAbout";
 
 
 export function Page() {
     const sections: Dictionary<string, string>[] = [
-        {key: "Home", value: "#"},
-        {key: "About", value: "#aboutme"},
-        {key: "Experience", value: "#experience"},
-        {key: "Contact", value: "#contact"}
+        {key: "Home", value: "home"},
+        {key: "About", value: "aboutme"},
+        {key: "Experience", value: "experience"},
+        {key: "Contact", value: "contact"}
     ];
 
     const welcomeScreenRef = useRef(null);
@@ -27,6 +28,7 @@ export function Page() {
             <WelcomeScreen welcomeScreenRef={welcomeScreenRef}/>
 
             <div className={classes.contentContainer}>
+                <SectionAbout/>
             </div>
         </div>
     );

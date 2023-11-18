@@ -7,6 +7,9 @@
 }
 
 .contentContainer {
+    @extend .centerDivContentsH;
+    flex-direction: column;
+
     width: 100%;
     max-width: 110rem;
 }
