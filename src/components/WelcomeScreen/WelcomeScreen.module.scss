@@ -25,6 +25,10 @@
 }
 
 .welcomeText {
-  font-size: 6.5vw;
+  font-size: clamp(1.8rem, $font-size-huge, 6rem);
   color: $font-bright-color;
 }
+
+
+
+

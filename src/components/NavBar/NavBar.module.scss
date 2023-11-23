@@ -1,5 +1,6 @@
 @import "../../sharedModules/Variables.module";
 @import "../../sharedModules/Common.module";
+@import "../Header/Header.module";
 
 .navbarUl {
     @extend .centerDivContentsHRow;
@@ -9,7 +10,7 @@
     list-style-type: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: $header-change-to-mobile) {
     .navbarUl {
         flex-direction: column;
         margin-left: 0;

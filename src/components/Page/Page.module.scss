@@ -1,9 +1,11 @@
 @import "../../sharedModules/Common.module";
+@import "../../sharedModules/Variables.module";
 
 .mainContainer {
     @extend .centerDivContentsH;
     //position: relative;
     height: 300vh;
+    overflow-y: hidden;
 }
 
 .contentContainer {
@@ -11,5 +13,5 @@
     flex-direction: column;
 
     width: 100%;
-    max-width: 110rem;
+    max-width: $content-max-width;
 }

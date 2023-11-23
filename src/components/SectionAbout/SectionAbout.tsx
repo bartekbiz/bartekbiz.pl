@@ -3,7 +3,7 @@ import sectionClasses from "../../sharedModules/Section.module.scss";
 
 export function SectionAbout() {
     return (
-        <div id={"aboutme"} style={{marginTop: "0.2rem"}}>
+        <div id={"about"} style={{marginTop: "0.2rem"}}>
             <div className={sectionClasses.sectionContainer}>
                 <div className={sectionClasses.sectionTitle}>
                     About

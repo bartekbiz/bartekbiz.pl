@@ -2,52 +2,61 @@
 @import "../../sharedModules/Variables.module";
 @import "../WelcomeScreen/WelcomeScreen.module";
 
+// Variables
 $header-height: 4.35rem;
-$header-height-mobile: 22rem;
-$header-margin-left-right: 5%;
-$header-contents-width: calc(100% - 2 * $header-margin-left-right);
+$header-change-to-mobile: 750px;
 
+// Header containers
 .header {
   position: fixed;
   top: -0.3vh;
+  left: 0;
   right: 0;
+  width: 100%;
+}
 
-  z-index: 1000;
+.headerMainContainer {
+  @extend .header;
+  @extend .centerDivContentsH;
 }
 
 .headerContentsContainer {
-  @extend .header;
-  width: $header-contents-width;
-  margin-left: $header-margin-left-right;
-  margin-right: $header-margin-left-right;
-
-  @extend .centerDivContentsHVRow;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  max-width: $content-max-width;
+  z-index: 1000;
 }
 
-.logoContainer {
-  color: $font-bright-color;
+.headerContents {
+  margin-left: $content-margin-left-right;
+  margin-right: $content-margin-left-right;
+
+  @extend .centerDivContentsHVRow;
+  justify-content: space-between;
 }
 
 .headerBackground {
   @extend .header;
-
-  width: 100%;
-
   height: $header-height;
   background-color: #2c2626;
   box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
 }
 
+// Logo
+.logoContainer {
+  color: $font-bright-color;
+}
 
-@media (max-width: 700px) {
-  .headerContentsContainer {
+.logoText {
+  white-space: nowrap;
+}
+
+// Header mobile
+@media (max-width: $header-change-to-mobile) {
+  .headerContents {
     flex-direction: column;
   }
 
-  .headerBackground {
-    height: $header-height-mobile;
+  .logoText {
+    margin-bottom: 0.5vh;
   }
 }

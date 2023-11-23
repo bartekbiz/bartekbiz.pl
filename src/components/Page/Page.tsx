@@ -10,7 +10,7 @@ import {SectionAbout} from "../SectionAbout/SectionAbout";
 export function Page() {
     const sections: Dictionary<string, string>[] = [
         {key: "Home", value: "home"},
-        {key: "About", value: "aboutme"},
+        {key: "About", value: "about"},
         {key: "Experience", value: "experience"},
         {key: "Contact", value: "contact"}
     ];
@@ -20,12 +20,13 @@ export function Page() {
 
     return (
         <div className={classes.mainContainer}>
+
+            <WelcomeScreen welcomeScreenRef={welcomeScreenRef}/>
+
             <Header
                 sections={sections}
                 welcomePhotoIsInView={welcomeScreenIsInView}
             />
-
-            <WelcomeScreen welcomeScreenRef={welcomeScreenRef}/>
 
             <div className={classes.contentContainer}>
                 <SectionAbout/>

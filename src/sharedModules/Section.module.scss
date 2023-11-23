@@ -1,11 +1,15 @@
+@import "../sharedModules/Variables.module";
+
 .sectionContainer {
-  margin: 15vh 15vw;
+  margin: 15vh $content-margin-left-right;
 }
 
 .sectionTitle {
-  font-size: 7rem;
+  font-size: clamp(3rem, $font-size-huge, 6rem);
 }
 
 .sectionText {
-
+  text-align: justify;
+  text-justify: inter-word;
 }
+
