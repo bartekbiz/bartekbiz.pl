@@ -1,0 +1,6 @@
+@import "../../sharedModules/Button.module";
+
+.menuButton {
+  @extend .btnWithIcon;
+
+}

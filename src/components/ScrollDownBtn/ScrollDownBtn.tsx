@@ -1,18 +1,17 @@
 import React from "react";
-import { FaChevronDown } from "react-icons/fa";
 import classes from "./ScrollDownBtn.module.scss";
+import buttonClasses from "../../sharedModules/Button.module.scss";
 import {motion} from "framer-motion";
-import {Link} from "react-scroll";
 import {NavBarLink} from "../NavBar/NavBarLink";
 import {BsChevronCompactDown} from "react-icons/bs";
 
 export function ScrollDownBtn() {
-    let section = "aboutme";
+    let section = "about";
 
     return (
         <div className={classes.scrollDownBtnContainer}>
             <motion.button
-                className={classes.btn}
+                className={buttonClasses.btnWithIcon}
 
                 variants={{
                     up: {y: -7},
