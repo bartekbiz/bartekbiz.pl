@@ -1,5 +1,7 @@
 # bartekbiz.pl - My own promotional website.
 
+</br>
+
 ## Tech stack:
 * React JS
 * TypeScript
