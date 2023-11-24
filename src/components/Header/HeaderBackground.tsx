@@ -4,20 +4,20 @@ import {motion, useAnimation} from "framer-motion";
 
 
 interface HeaderBackgroundProps {
-    welcomePhotoIsInView: boolean
+    show: boolean
 }
-export function HeaderBackground({welcomePhotoIsInView}: HeaderBackgroundProps) {
+export function HeaderBackground({show}: HeaderBackgroundProps) {
     const mainControls = useAnimation();
 
     useEffect(() => {
-        if (!welcomePhotoIsInView) {
+        if (show) {
             mainControls.start("visible");
         }
         else {
             mainControls.start("hidden");
         }
 
-    }, [welcomePhotoIsInView]);
+    }, [show]);
 
     return (
         <motion.div

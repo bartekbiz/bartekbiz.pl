@@ -3,13 +3,13 @@
 @import "../WelcomeScreen/WelcomeScreen.module";
 
 // Variables
-$header-height: 4.35rem;
+$header-height: 4rem;
 $header-change-to-mobile: 750px;
 
 // Header containers
 .header {
   position: fixed;
-  top: -0.3vh;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -48,6 +48,7 @@ $header-change-to-mobile: 750px;
 
 .logoText {
   white-space: nowrap;
+  margin-top: 0.8rem;
 }
 
 // Header mobile

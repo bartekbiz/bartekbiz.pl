@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {NavBar} from "../NavBar/NavBar";
 import {Dictionary} from "../../utils/Dictionary";
 import classes from "./Header.module.scss";
@@ -9,12 +9,23 @@ import {HeaderBackground} from "./HeaderBackground";
 
 interface HeaderProps {
     sections: Dictionary<string, string>[],
-    welcomePhotoIsInView: boolean
+    scrollPosition: number
 }
-export function Header({sections, welcomePhotoIsInView}: HeaderProps) {
+export function Header({sections, scrollPosition}: HeaderProps) {
+    const [showBackground, setShowBackground] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (scrollPosition != 0) {
+            setShowBackground(true);
+        }
+        else {
+            setShowBackground(false);
+        }
+    }, [scrollPosition]);
+
     return (
         <div className={classes.headerMainContainer}>
-            <HeaderBackground welcomePhotoIsInView={welcomePhotoIsInView}/>
+            <HeaderBackground show={showBackground}/>
 
             <div className={classes.headerContentsContainer}>
                 <div className={classes.headerContents}>

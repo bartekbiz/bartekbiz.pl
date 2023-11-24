@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {SyntheticEvent, useEffect, useRef, useState} from "react";
 import {Header} from "../Header/Header";
 import classes from "./Page.module.scss";
 import {Dictionary} from "../../utils/Dictionary";
@@ -15,17 +15,28 @@ export function Page() {
         {key: "Contact", value: "contact"}
     ];
 
-    const welcomeScreenRef = useRef(null);
-    const welcomeScreenIsInView = useInView(welcomeScreenRef);
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <div className={classes.mainContainer}>
-
-            <WelcomeScreen welcomeScreenRef={welcomeScreenRef}/>
+            <WelcomeScreen/>
 
             <Header
                 sections={sections}
-                welcomePhotoIsInView={welcomeScreenIsInView}
+                scrollPosition={scrollPosition}
             />
 
             <div className={classes.contentContainer}>
