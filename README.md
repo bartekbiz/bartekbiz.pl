@@ -5,6 +5,8 @@
 * TypeScript
 * SCSS
 
+</br>
+
 ## Installing the app:
 Do the following steps:
 * install the latest node.js
