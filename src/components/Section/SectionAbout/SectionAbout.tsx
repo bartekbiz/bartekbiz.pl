@@ -1,13 +1,12 @@
 import React from "react";
-import sectionClasses from "../../sharedModules/Section.module.scss";
+import sectionClasses from "../../../sharedModules/Section.module.scss";
+import {Section} from "../Section";
 
 export function SectionAbout() {
+    const sectionName: string = "About";
+
     return (
-        <div id={"about"}>
-            <div className={sectionClasses.sectionContainer}>
-                <div className={sectionClasses.sectionTitle}>
-                    About
-                </div>
+        <Section id={sectionName.toLowerCase()} title={sectionName}>
                 <div className={sectionClasses.sectionText}>
                     Sit quaerat asperiores ipsa non omnis et.
                     Ratione ipsum nisi eius aliquid molestiae rerum est autem.
@@ -22,7 +21,6 @@ export function SectionAbout() {
                     Praesentium qui unde quas voluptatem.
                     Ullam ipsum quia maxime quasi quam.
                 </div>
-            </div>
-        </div>
+        </Section>
     );
 }

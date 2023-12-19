@@ -4,7 +4,9 @@ import classes from "./Page.module.scss";
 import {Dictionary} from "../../utils/Dictionary";
 import {useInView} from "framer-motion";
 import {WelcomeScreen} from "../WelcomeScreen/WelcomeScreen";
-import {SectionAbout} from "../SectionAbout/SectionAbout";
+import {SectionAbout} from "../Section/SectionAbout/SectionAbout";
+import {SectionExperience} from "../Section/SectionExperience/SectionExperience";
+import {SectionContact} from "../Section/SectionContact/SectionContact";
 
 
 export function Page() {
@@ -41,6 +43,8 @@ export function Page() {
 
             <div className={classes.contentContainer}>
                 <SectionAbout/>
+                <SectionExperience/>
+                <SectionContact/>
             </div>
         </div>
     );
