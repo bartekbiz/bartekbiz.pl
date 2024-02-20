@@ -1,8 +1,7 @@
-import React, {SyntheticEvent, useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Header} from "../Header/Header";
 import classes from "./Page.module.scss";
 import {Dictionary} from "../../utils/Dictionary";
-import {useInView} from "framer-motion";
 import {WelcomeScreen} from "../WelcomeScreen/WelcomeScreen";
 import {SectionAbout} from "../Section/SectionAbout/SectionAbout";
 import {SectionExperience} from "../Section/SectionExperience/SectionExperience";
