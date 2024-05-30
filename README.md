@@ -1,4 +1,4 @@
-# bartekbiz.pl - My own promotional website.
+# bartekbiz.pl - My own portfolio-website.
 
 </br>
 
